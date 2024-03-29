@@ -1,0 +1,1 @@
+Este projeto é referente as aulas de Desenvolvimento de Software Multiplataforma do 3° Semestre da Fatec de Itapira
