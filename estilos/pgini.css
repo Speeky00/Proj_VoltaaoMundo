@@ -1,0 +1,23 @@
+.sidebar{
+ background-color:#7aa8d6;
+ padding-top: 60px;
+}
+
+.sidebar a{
+ padding: 10px 15px;
+ font-size: 18px;
+ color: #fff;
+ display: block;
+ text-decoration: none;
+}
+
+.sidebar a.active{
+ background-color:#007bff;
+}
+
+.header{
+ background-color: #127beb;
+ color: #fff;
+ padding: 10px;
+ text-align: center;
+}
