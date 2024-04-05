@@ -7,10 +7,9 @@ body{
 
 #background-thumbnails {
   display:flex;
-  position: absolute;
-  top: 80%;
-  bottom: 10%;
+  position: fixed;
   background-size: cover;
+  bottom:0;
 }
 
 #background-thumbnails img {
@@ -20,15 +19,12 @@ body{
   cursor: pointer;
 }
 
-#botao{
-  margin-top: 1%;
-}
-
-#botao img{
-  width:25%;
+#button img{
+  width: 10%;
   height: auto;
 }
 
 #conteudo{
   background-color: rgba(235, 235, 235, 0.514);
+  margin-top:30%;
 }
