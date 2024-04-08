@@ -18,6 +18,7 @@
     z-index: 1000;
     position: fixed;
     left: 250px;
+    top:0;
     width: 0;
     height: 100%;
     margin-left: -250px;
@@ -27,8 +28,7 @@
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
-    border-color: #6d6d6d;
-    border-style:solid;
+    border-style: solid;
 }
 
 #wrapper.toggled #sidebar-wrapper {
@@ -112,6 +112,7 @@
     #page-content-wrapper {
         padding: 20px;
         position: relative;
+        border-style: solid;
     }
 
     #wrapper.toggled #page-content-wrapper {
@@ -121,19 +122,23 @@
 }
 .sidebar-brand img{
     width: 20px;
+    margin: 5px;
 }
 
 footer {
     bottom: 0;
+    left:0;
     width: 100%;
-    background-color:rgba(255, 0, 0, 0.815);
+    background-color:rgb(255, 255, 255);
+    position: fixed;
+    border-style: solid;
   } 
 
   .header{
-    margin: 0 auto;
     display:flex;
     align-items: center;
-    background-color: rgb(0, 89, 255);
+    background-color: rgb(254, 254, 255);
+    border-style: solid;
   }
 
 .header img{
