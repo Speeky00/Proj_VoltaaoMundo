@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
+<head>
     <!-- Meta tags Obrigatórias -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -9,39 +9,40 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="estilos/estilo.css">
 
-    <title>Bem-vindo á França</title>
-  </head>
-  <body>
-    <div class="container" id="conteudo">
-      <div class="row justify-content-center">
-       <div class="col-md-3">
-        <h1 class="display-2"><strong>França</strong></h1>
-        <h3 class="lead"><Strong>Venha Conhecer!</Strong></h3>
-       </div>
-      </div>
-     </div>
-      <div class="container">
-       <div class="row">
-        <div class="col text-center" id="button">
-         <a href="pagina-inicial.html" class="btn m-4 btn-md"><img src="img/bandeira-franca.png " class="img-fluid"></a>
-      </div>
-      </div>
-       </div>
-      </div>
-      <div class="container-fluid" >
-       <div class="row justify-content-center">
-        <div id="background-thumbnails" class="d-flex flex-nowrap justify-content-center align-items-center overflow-auto">>
-         <img src="img/bandeira-franca.jpg" class="img-fluid thumbnail" alt="Bandeira da França" onclick="changeBackground('img/bandeira-franca.jpg')" />
-         <img src="img/comida-francesa.jpg" class="img-fluid thumbnail" alt="Comida Francesa" onclick="changeBackground('img/comida-francesa.jpg')" />
-         <img src="img/senhores.jpg" class="img-fluid thumbnail" alt="Monumento Frances" onclick="changeBackground('img/senhores.jpg')" />
+    <title>Bem-vindo à França</title>
+</head>
+<body class="d-flex flex-column" style="min-height: 100vh;">
+<div class="container mt-auto mb-4" id="conteudo">
+    <div class="row justify-content-center">
+        <div class="col-md-3 text-center">
+            <h1 class="display-2"><strong>França</strong></h1>
+            <h3 class="lead"><Strong>Venha Conhecer!</Strong></h3>
         </div>
-       </div>
-      </div>
-     <script src="script/script.js"></script>
-    <!-- JavaScript (Opcional) -->
-    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  </body>
+    </div>
+</div>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col text-center">
+            <a href="pagina-inicial.html" id="button" class="btn m-4 btn-sm"><img src="img/bandeira-franca.png " class="img-fluid"></a>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div id="background-thumbnails" class="d-flex flex-nowrap justify-content-center align-items-center overflow-auto mt-auto">
+                <img src="img/bandeira-franca.jpg" class="img-fluid thumbnail" alt="Bandeira da França" onclick="changeBackground('img/bandeira-franca.jpg')" />
+                <img src="img/comida-francesa.jpg" class="img-fluid thumbnail" alt="Comida Francesa" onclick="changeBackground('img/comida-francesa.jpg')" />
+                <img src="img/senhores.jpg" class="img-fluid thumbnail" alt="Monumento Frances" onclick="changeBackground('img/senhores.jpg')" />
+            </div>
+        </div>
+    </div>
+</div>
+<script src="script/script.js"></script>
+<!-- JavaScript (Opcional) -->
+<!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
 </html>
