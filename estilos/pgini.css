@@ -1,5 +1,7 @@
  body {
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
  }
 
 #wrapper {
@@ -23,12 +25,10 @@
     height: 100%;
     margin-left: -250px;
     overflow-y: auto;
-    background: #ffffff;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
-    border-style: solid;
 }
 
 #wrapper.toggled #sidebar-wrapper {
@@ -78,6 +78,7 @@
 }
 
 .sidebar-nav > .sidebar-brand {
+    margin-top: 50px;
     height: 65px;
     font-size: 18px;
     line-height: 60px;
@@ -112,7 +113,6 @@
     #page-content-wrapper {
         padding: 20px;
         position: relative;
-        border-style: solid;
     }
 
     #wrapper.toggled #page-content-wrapper {
@@ -125,26 +125,14 @@
     margin: 5px;
 }
 
-footer {
-    bottom: 0;
-    left:0;
-    width: 100%;
-    background-color:rgb(255, 255, 255);
-    position: fixed;
-    border-style: solid;
-  } 
-
-  .header{
-    display:flex;
-    align-items: center;
-    background-color: rgb(254, 254, 255);
-    border-style: solid;
-  }
-
 .header img{
     width: 25px;
     margin: 10px;
 }
 #menu-toggle img{
     width: 25px;  
+}
+
+p{
+    font-size: 18px;
 }
