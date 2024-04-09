@@ -13,9 +13,9 @@ body{
 }
 
 #background-thumbnails img {
-  width: 10%;
+  max-width: 10vw;
   height: auto;
-  margin:1%;
+  margin:3%;
   cursor: pointer;
 }
 
