@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 18/06/2024 às 05:38
--- Versão do servidor: 10.4.28-MariaDB
--- Versão do PHP: 8.2.4
+-- Tempo de geração: 18-Jun-2024 às 21:39
+-- Versão do servidor: 10.4.32-MariaDB
+-- versão do PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `comentarios`
+-- Estrutura da tabela `comentarios`
 --
 
 CREATE TABLE `comentarios` (
@@ -35,24 +35,24 @@ CREATE TABLE `comentarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Despejando dados para a tabela `comentarios`
+-- Extraindo dados da tabela `comentarios`
 --
 
 INSERT INTO `comentarios` (`id`, `comentario`, `userid`, `status`) VALUES
-(25, 'aaaaaaa', 10, 1),
-(26, 'aggdhfdghj', 10, 3),
-(27, 'a', 13, 1),
-(28, 'a', 13, 1),
-(29, 'a', 13, 2),
-(30, 'a', 10, 3),
-(31, 'dfsfsg', 10, 2),
-(32, 'buseta', 13, 3),
-(33, 'aaaaaaaa', 11, 2);
+(42, 'Gostaria de saber mais curiosidades sobre a França', 20, 1),
+(44, 'AAAAAAAAAAAIIIIIIIIIIIIINNNNNNNNNDDDDDDDDDDDDAAAAAAAAAAAA', 21, 2),
+(45, 'Mto bao teteu, ta foda\r\n', 21, 2),
+(46, 'Gostei das comidas,principalmente dos doces', 22, 1),
+(47, 'Você deveria pesquisar mais comidas para colocar no site', 22, 1),
+(48, 'Paris é muito bonita!!!', 19, 1),
+(49, 'È muuuito bonito', 19, 1),
+(50, 'FAZ O L!!!!!!!!!!!!!!!', 20, 2),
+(51, 'Gostei do festival de cinema, ele deve ser muito bonito', 23, 1);
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `status`
+-- Estrutura da tabela `status`
 --
 
 CREATE TABLE `status` (
@@ -61,7 +61,7 @@ CREATE TABLE `status` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Despejando dados para a tabela `status`
+-- Extraindo dados da tabela `status`
 --
 
 INSERT INTO `status` (`id`, `status`) VALUES
@@ -72,7 +72,7 @@ INSERT INTO `status` (`id`, `status`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tipo`
+-- Estrutura da tabela `tipo`
 --
 
 CREATE TABLE `tipo` (
@@ -81,7 +81,7 @@ CREATE TABLE `tipo` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Despejando dados para a tabela `tipo`
+-- Extraindo dados da tabela `tipo`
 --
 
 INSERT INTO `tipo` (`id`, `tipo`) VALUES
@@ -91,7 +91,7 @@ INSERT INTO `tipo` (`id`, `tipo`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `usuarios`
+-- Estrutura da tabela `usuarios`
 --
 
 CREATE TABLE `usuarios` (
@@ -104,20 +104,23 @@ CREATE TABLE `usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Despejando dados para a tabela `usuarios`
+-- Extraindo dados da tabela `usuarios`
 --
 
 INSERT INTO `usuarios` (`id`, `nome`, `email`, `senha`, `datacad`, `tipo`) VALUES
-(10, 'Admi', 'matheus.machado12@fatec.sp.gov.br', 'ed968e840d10d2d313a870bc131a4e2c311d7ad09bdf32b3418147221f51a6e2', '17-06-2024', 2),
-(11, 'Rebeca-Açucar', 'Juju@fatec.sp.gov.br', '61be55a8e2f6b4e172338bddf184d6dbee29c98853e0a0485ecee7f27b9af0b4', '17-06-2024', 2),
-(13, 'Matheus', 'matheusfm290400@gmail.com', '3ea4da47cbcdc41976c7e624265a130d2385dd0df7d155846cef8740949c6eec', '17-06-2024', 1);
+(18, 'Matheus', 'matheusfm290400@gmail.com', '3ea4da47cbcdc41976c7e624265a130d2385dd0df7d155846cef8740949c6eec', '18-06-2024', 1),
+(19, 'Luis', 'Luistopan@gmail.com', '03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4', '18-06-2024', 1),
+(20, 'Marco', 'marcao@gmail.com', '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5', '18-06-2024', 2),
+(21, 'Adriano', 'driano@gmail.com', '03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4', '18-06-2024', 2),
+(22, 'Mayara', 'Mayarap@gmail.com', '03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4', '18-06-2024', 2),
+(23, 'Matheus Souza', 'matheussouza@gmail.com', '03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4', '18-06-2024', 2);
 
 --
 -- Índices para tabelas despejadas
 --
 
 --
--- Índices de tabela `comentarios`
+-- Índices para tabela `comentarios`
 --
 ALTER TABLE `comentarios`
   ADD PRIMARY KEY (`id`),
@@ -125,32 +128,32 @@ ALTER TABLE `comentarios`
   ADD KEY `fk_status` (`status`);
 
 --
--- Índices de tabela `status`
+-- Índices para tabela `status`
 --
 ALTER TABLE `status`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `tipo`
+-- Índices para tabela `tipo`
 --
 ALTER TABLE `tipo`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `usuarios`
+-- Índices para tabela `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT para tabelas despejadas
+-- AUTO_INCREMENT de tabelas despejadas
 --
 
 --
 -- AUTO_INCREMENT de tabela `comentarios`
 --
 ALTER TABLE `comentarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 
 --
 -- AUTO_INCREMENT de tabela `status`
@@ -168,14 +171,14 @@ ALTER TABLE `tipo`
 -- AUTO_INCREMENT de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
--- Restrições para tabelas despejadas
+-- Restrições para despejos de tabelas
 --
 
 --
--- Restrições para tabelas `comentarios`
+-- Limitadores para a tabela `comentarios`
 --
 ALTER TABLE `comentarios`
   ADD CONSTRAINT `fk_status` FOREIGN KEY (`status`) REFERENCES `status` (`id`),
