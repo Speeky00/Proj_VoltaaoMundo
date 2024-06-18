@@ -13,7 +13,6 @@ $_lista=$usuario->listar();
 $tipo=new Tipo();
 $listaTipo=$tipo->listar();
 
-$userid = $_SESSION['userid'];
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -40,16 +39,27 @@ $userid = $_SESSION['userid'];
 
     <div id="wrapper" class="toggled">
         <div id="page-content-wrapper">
-        <h1>Alterar Dados de <?=$usuario->nome?></h1>
-        <form action="alterarusuario.php" method="POST">
-            <input type="hidden" name="id" value="<?= $id ?>">
-            <label for="nome">Nome:</label> 
-            <input type="text" id="nome" name="nome" value="<?=$usuario->nome?>">
-            <label for="email">Email:</label> 
-            <input type="email" id="email" name="email" value="<?=$usuario->email?>">
-            <label for="senha">Senha:</label> 
-            <input type="password" id="senha" name="senha">
-            <select name="tipo" id="tipo">
+        <div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h1 class="text-center">Alterar Dados de <?=$usuario->nome?></h1>
+            <form action="alterarusuario.php" method="POST">
+                <input type="hidden" name="id" value="<?=$id?>">
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" class="form-control" value="<?=$usuario->nome?>">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" class="form-control" value="<?=$usuario->email?>">
+                </div>
+                <div class="form-group">
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="tipo">Tipo:</label>
+                    <select name="tipo" id="tipo"required>
             <option value=''>Selecione...</option>
             <?php
                 foreach ($listaTipo as $tipo):
@@ -57,15 +67,17 @@ $userid = $_SESSION['userid'];
                         {$tipo['tipo']}
                         </option>";
                 endforeach;
-            ?>
-        </select><br><br>
-
-            <button type="submit" class="btn-login">Alterar</button>
-        </form>
+                ?>
+                </select>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Alterar</button>
+                    <a href="listausuarios.php"><button class="btn btn-danger">Cancelar</button></a>
+                </div>
+            </form>
         </div>
-        <a href="listausuarios.php">Cancelar</a>
     </div>
-
+</div>
     <div class="container-fluid">
     <footer class="footer text-center py-1 fixed-bottom" style="background-color:#0055a4; color: #FFFFFF; font-family: 'Open Sans', sans-serif;">
         <p class="m-0"><strong>Projeto Volta ao Mundo - Desenvolvimento Web III</strong></p>

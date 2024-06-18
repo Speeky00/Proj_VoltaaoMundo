@@ -64,14 +64,20 @@
                 </div>
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col m-5 justify-content-center"><center>
+                    <div class="col md-5 mx-auto justify-content-center"><center>
                         <form action="autenticar.php" method="POST">
+                            <div class="form-group">
                             <label for="email">Email:</label>
                             <input type="email" class="form-control col-3"style="border-color:black;" id="email" name="email"><br>
+                            </div>
+                            <div class="form-group">
                             <label for="senha">Senha:</label>
                             <input type="password" class="form-control col-3" style="border-color:black; id="senha" name="senha"><br>
-                            <button class="btn btn-dark m-1"><a href="cadastrar.php">Cadastre-se</a></button>
+                            </div>
+                            <div class="text-center">
+                            <button class="btn btn-dark m-1"><a href="cadastrar.php" style="color:white;">Cadastre-se</a></button>
                             <button type="submit" class="btn btn-dark">Login</button>
+                            </div>
                         </center></form>
                     </div>
                 </div>

@@ -53,10 +53,10 @@
             </ul>
         </div>
         <div id="page-content-wrapper">
-        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle"><img src="img/menu.png"></a><br>
-        <h1>Usuario não encontrado, favor tentar novamente :( </h1>
-        <a href="login.php">Voltar ao Login</a>
-        </div>    
+            <div class="container mt-5 text-center">
+                <h1>Usuario não encontrado, favor tentar novamente :( </h1>
+                <a href="login.php"><button class="btn btn-primary m-5">Voltar ao Login</button></a>
+            </div>    
     </div>
     <div class="container-fluid">
         <footer class="footer text-center py-1 fixed-bottom"style="background-color:#0055a4; color: #FFFFFF; font-family: 'Open Sans', sans-serif;">

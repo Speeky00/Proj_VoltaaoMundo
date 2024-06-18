@@ -28,36 +28,54 @@ $lista = $comentario->listarespera();
 
     <div id="wrapper" class="toggled">
         <div id="page-content-wrapper">
-        <table border="3">
-            <tr>
-                <th>Email</th>
-                <th>Comentários</th>
-                <th>Ações</th>
-            </tr>
-            
-            <?php foreach ($lista as $linha): ?>
-                <tr>
-                    <td><?php echo $linha['email']; ?></td>
-                    <td><?php echo $linha['comentario']; ?></td>
-                    <td>
-                        <form action="alterarcomentario.php" method="post" style="display:inline;">
-                            <input type="hidden" name="id" value="<?php echo $linha['id']; ?>">
-                            <input type="hidden" name="acao" value="aceitar">
-                            <button type="submit" class="btn btn-success">Aceitar</button>
-                        </form>
-                        <form action="alterarcomentario.php" method="post" style="display:inline;">
-                            <input type="hidden" name="id" value="<?php echo $linha['id']; ?>">
-                            <input type="hidden" name="acao" value="rejeitar">
-                            <button type="submit" class="btn btn-danger">Rejeitar</button>
-                        </form>
-                    </td>                
-                </tr>
-            <?php endforeach; ?> 
-        </table>
-        <a href="login.php"><button type="button" class="btn btn-primary">Novo Comentário</button></a>
-        <br>
-        <a href="rejeitadas.php">Comentarios rejeitados</a><br>
-        <a href="listaadm.php">Voltar</a>
+        <div class="container-fluid m-2">
+            <center><h1>Comentarios no Aguardo</h1></center>
+        </div>
+        <div class="row">
+            <div class="col-md-8 offset-md-2 p-2">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Email</th>
+                            <th>Comentários</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                <tbody>
+                <?php foreach ($lista as $linha): ?>
+                    <tr>
+                        <td><?php echo $linha['email']; ?></td>
+                        <td><?php echo $linha['comentario']; ?></td>
+                        <td>
+                            <form action="alterarcomentario.php" method="post" style="display:inline;">
+                                <input type="hidden" name="id" value="<?php echo $linha['id']; ?>">
+                                <input type="hidden" name="acao" value="aceitar">
+                                <button type="submit" class="btn btn-success">Aceitar</button>
+                            </form>
+                            <form action="alterarcomentario.php" method="post" style="display:inline;">
+                                <input type="hidden" name="id" value="<?php echo $linha['id']; ?>">
+                                <input type="hidden" name="acao" value="rejeitar">
+                                <button type="submit" class="btn btn-danger">Rejeitar</button>
+                            </form>
+                        </td> 
+                    </tr>
+                <?php endforeach; ?>
+                </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <a href="inseriradm.php"><button type="button" class="btn btn-primary">Novo Comentário</button></a>
+                    <a href="rejeitadas.php"><button type="button" class="btn btn-warning">Comentarios rejeitados</button></a>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col text-center">
+                    <a href="listaadm.php"><button type="button" class="btn btn-primary">Voltar</button></a>
+                </div>
+            </div>
         </div>
     </div>
 

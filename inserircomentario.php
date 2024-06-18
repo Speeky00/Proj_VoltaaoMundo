@@ -39,17 +39,25 @@ $userid = $_SESSION['userid'];
         </div>
     </div> 
 
-    <div id="wrapper" class="toggled">
+    <div id="wrapper" class="toggled"><center>
         <div id="page-content-wrapper">
-        <h1>Faça um comentário</h1>
-        <form action="gravarcomentario.php" method="POST">
-            <input type="hidden" id="userid" name="userid" value="<?php echo $userid; ?>">
-            <label for="comentario">Comentário:</label> 
-            <textarea rows="5" cols="80" id="comentario" name="comentario"></textarea>
-            <button type="submit" class="btn-login">Enviar comentário</button>
-        </form>
+        <div class="container"> 
+                <h1>Faça um comentário</h1>
+            </div>
+            <div class="container">
+                <div class="row justify-content-center form-container">
+                <form action="gravarcomentario.php" method="POST" class="col-md-8">
+                    <input type="hidden" id="userid" name="userid" value="<?php echo $userid; ?>">
+                        <div class="form-group">
+                            <label for="comentario">Comentário:</label>
+                            <textarea class="form-control" rows="5" id="comentario" name="comentario"></textarea>
+                        </div>
+                    <button type="submit" class="btn btn-success">Enviar comentário</button>
+                </form>
+                </div>
+            </div>
         </div>
-        <a href="listacomentario.php">Cancelar</a>
+        <a href="logout.php"><button class="btn btn-danger">Cancelar</button></a></center>
     </div>
 
     <div class="container-fluid">

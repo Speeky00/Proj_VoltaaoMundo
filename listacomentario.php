@@ -28,22 +28,27 @@ $lista=$comentario->listar();
 
     <div id="wrapper" class="toggled">
         <div id="page-content-wrapper">
-        <table border="3">
-    <tr>
-        <th>Email</th>
-        <th>Comentários</th> 
-    </tr>
-    
-    <?php foreach ($lista as $linha): ?>
-        <tr>
-            <td><?php echo $linha['email']; ?></td>
-            <td><?php echo $linha['comentario']; ?></td>                
-        </tr>
-    <?php endforeach; ?> 
-</table>
-<a href="login.php"><button type="button" class="btn btn-primary">Novo Comentário</button></a>
-<a href="pagina-inicial.html"><button type="button" class="btn btn-primary">Voltar</button></a>
-    </div>
+        <div class="container-fluid m-2">
+            <center><h1>Lista de Comentários</h1></center>
+        </div>
+        <div class="row">
+            <div class="col-md-8 offset-md-2 p-2">
+                <div class="list-group">
+                    <?php foreach ($lista as $linha): ?>
+                        <div class="list-group-item">
+                            <H5 class="mb-1"><?php echo $linha['comentario']; ?></H5>
+                            <p class="mb-1"><?php echo $linha['email']; ?></p>
+                        </div>
+                        <br>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        </div>
+        <div class="container"><center>
+            <a href="login.php"><button type="button" class="btn btn-primary">Novo Comentário</button></a>
+            <a href="pagina-inicial.html"><button type="button" class="btn btn-primary">Voltar</button></a>
+                    </center></div>
+        </div>
 
     <div class="container-fluid">
     <footer class="footer text-center py-1 fixed-bottom"style="background-color:#0055a4; color: #FFFFFF; font-family: 'Open Sans', sans-serif;">

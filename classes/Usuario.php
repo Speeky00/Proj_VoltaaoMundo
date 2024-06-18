@@ -5,6 +5,7 @@ class Usuario{
     public $nome;
     public $email;
     public $senha;
+    public $tipo;
 
     public function __construct($id=false){
         if($id){
@@ -52,6 +53,13 @@ class Usuario{
         $stmt->bindParam(':email', $this->email);
         $stmt->bindParam(':senha', $this->senha);
         $stmt->bindParam(':tipo', $this->tipo);
+        $stmt->bindParam(':id', $this->id);
+        $stmt->execute();
+    }
+    public function excluir(){
+        $sql="DELETE FROM usuarios WHERE id = :id";
+        include "classes/conexao.php";
+        $stmt = $conexao->prepare($sql);
         $stmt->bindParam(':id', $this->id);
         $stmt->execute();
     }

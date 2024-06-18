@@ -28,24 +28,41 @@ $lista=$usuario->listar();
 
     <div id="wrapper" class="toggled">
         <div id="page-content-wrapper">
-        <table border="3">
-    <tr>
-        <th>Nome</th>
-        <th>Email</th> 
-        <th>Tipo</th>
-    </tr>
-    
-    <?php foreach ($lista as $linha): ?>
-        <tr>
-            <td><?php echo $linha['nome']; ?></td>
-            <td><?php echo $linha['email']; ?></td>
-            <td><?php echo $linha['tipo']; ?></td>
-            <td><a href="attusuario.php?id=<?=$linha['id']?>">Alterar</a></td>
-            <td><a href=".php?id=<?=$linha['id']?>">Excluir</a></td>
-        </tr>
-    <?php endforeach; ?> 
-</table>
-<a href="adm.php">Voltar</a>
+            <div class="row">
+                <div class="col-md-8 offset-md-2 p-2">
+                <table class="table table-bordered">
+                <div class="container-fluid m-2">
+                <center><h1>Lista de Usuarios</h1></center>
+                </div>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Tipo</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <?php foreach ($lista as $linha): ?>
+                    <tr>
+                        <td><?php echo $linha['nome']; ?></td>
+                        <td><?php echo $linha['email']; ?></td>
+                        <td><?php echo $linha['tipo']; ?></td>
+                        <td>
+                            <a href="attusuario.php?id=<?=$linha['id']?>" class="btn btn-primary btn-sm">Alterar</a>
+                            <a href="excluirusuario.php?id=<?=$linha['id']?>" class="btn btn-danger btn-sm">Excluir</a>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+                </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col text-center">
+                <a href="adm.php"><button type="button"class="btn btn-primary">Voltar</button></a>
+            </div>
+        </div>    
     </div>
 
     <div class="container-fluid">

@@ -38,17 +38,27 @@ $userid = $_SESSION['userid'];
         </div>
     </div> 
 
-    <div id="wrapper" class="toggled">
+    <div id="wrapper" class="toggled"><center>
         <div id="page-content-wrapper">
-        <h1>Faça um comentário</h1>
-        <form action="gravaradm.php" method="POST">
-            <input type="hidden" id="userid" name="userid" value="<?php echo $userid; ?>">
-            <label for="comentario">Comentário:</label> 
-            <textarea rows="5" cols="80" id="comentario" name="comentario"></textarea>
-            <button type="submit" class="btn-login">Enviar comentário</button>
-        </form>
-        <a href="listaadm.php">Voltar</a>
+            <div class="container"> 
+                <h1>Faça um comentário</h1>
+            </div>
+            <div class="container">
+                <div class="row justify-content-center form-container">
+                <form action="gravaradm.php" method="POST" class="col-md-8">
+                    <input type="hidden" id="userid" name="userid" value="<?php echo $userid; ?>">
+                        <div class="form-group">
+                            <label for="comentario">Comentário:</label>
+                            <textarea class="form-control" rows="5" id="comentario" name="comentario"></textarea>
+                        </div>
+                    <button type="submit" class="btn btn-success">Enviar comentário</button>
+                </form>
+                </div>
+            </div>
         </div>
+        <div class="container">
+        <a href="listaadm.php"><button type="button"class="btn btn-primary">Voltar</button></a>
+        </center></div>
     </div>
 
     <div class="container-fluid">

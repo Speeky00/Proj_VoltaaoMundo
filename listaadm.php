@@ -28,33 +28,36 @@ $lista=$comentario->listar();
 
     <div id="wrapper" class="toggled">
         <div id="page-content-wrapper">
-            <div class="container">
-            <table border="3">
-                <tr>
-                    <th>Email</th>
-                    <th>Comentários</th> 
-                </tr>
-            <?php foreach ($lista as $linha): ?>
-            <tr>
-                <td><?php echo $linha['email']; ?></td>
-                <td><?php echo $linha['comentario']; ?></td>
-                <td><a href="excluircomentario.php?id=<?=$linha['id']?>">                
-            </tr>
-            <?php endforeach; ?> 
-            </table>
+        <div class="container-fluid m-2">
+            <center><h1>Comentarios Aprovados</h1></center>
+        </div>
+        <div class="row">
+            <div class="col-md-8 offset-md-2 p-2">
+                <div class="list-group">
+                    <?php foreach ($lista as $linha): ?>
+                        <div class="list-group-item">
+                            <h5 class="mb-1"><?php echo $linha['comentario']; ?></h5>
+                            <p class="mb-1"><?php echo $linha['email']; ?></p>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
         <div class="container">
             <div class="row">
-                <div class="col-3">
-                    <a href="inseriradm.php"><button type="button" class="btn btn-primary">Novo Comentário</button></a>
+                <div class="col-4">
+                    <a href="inseriradm.php"><button type="button" class="btn  btn-block btn-success">Novo Comentário</button></a>
                 </div>
-                <div class="col-3">
-                <a href="aguardo.php"><button type="button" class="btn btn-primary">Comentarios em aguardo</button></a>
+                <div class="col-4">
+                <a href="aguardo.php"><button type="button" class="btn btn-block btn-warning">Comentarios em aguardo</button></a>
                 </div>
-                <div class="col-3">
-                    <a href="rejeitadas.php"><button type="button" class="btn btn-primary">Comentarios rejeitados</button></a>
+                <div class="col-4">
+                    <a href="rejeitadas.php"><button type="button" class="btn btn-block btn-danger">Comentarios rejeitados</button></a>
                     </div>
-                <div class="col-3">
-                    <a href="adm.php">Voltar</a>
+                </div>
+                <div class="row mt-2">
+                    <div class="col text-center">
+                        <a href="adm.php"><button type="button"class="btn btn-primary">Voltar</button></a>
+                    </div>
                 </div>
             </div>
         </div>

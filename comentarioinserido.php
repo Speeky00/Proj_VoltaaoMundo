@@ -56,13 +56,25 @@
             </ul>
         </div>
         <div id="page-content-wrapper">
-        <h1>Obrigado pelo comentario!</h1>
-        <a href="inserircomentario.php">Inserir outro comentario</a><br>
-        <a href="logout.php">Sair</a>
-    <div class="container-fluid">
-        <footer class="footer text-center py-1 fixed-bottom"style="background-color:#0055a4; color: #FFFFFF; font-family: 'Open Sans', sans-serif;">
-            <p class="m-0"><strong>Projeto Volta ao Mundo - Desenvolvimento Web III</strong></p>
-        </footer>
+            <div class="container">
+                <div class="row m-5">
+                    <div class="col text-center">
+                        <h1>Obrigado pelo comentario!</h1>
+                        <h2>Seu comentário sera avaliado, e logo após postado se for aceito</h2>
+                    </div>
+                </div>
+                <div class="row m-5">
+                    <div class="col text-center">
+                        <a href="inserircomentario.php"><button class="btn btn-primary m-2">Inserir outro comentario</button></a>
+                        <a href="logout.php"><button class="btn btn-danger m-2">Sair</button></a>
+                    </div>
+                </div>
+        </div>
+        <div class="container-fluid">
+            <footer class="footer text-center py-1 fixed-bottom"style="background-color:#0055a4; color: #FFFFFF; font-family: 'Open Sans', sans-serif;">
+                <p class="m-0"><strong>Projeto Volta ao Mundo - Desenvolvimento Web III</strong></p>
+            </footer>
+        </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="script/scr01.js"></script>

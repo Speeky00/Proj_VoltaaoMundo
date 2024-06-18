@@ -54,17 +54,27 @@
         </div>
         
         <div id="page-content-wrapper">
-            <form action="efetuar-cadastro.php" method="POST">
-                <h1>Cadastro</h1>
+        <div class="container text-center"> 
+                <h1>Cadastre-se para inserir um comentário</h1>
+            </div>
+            <div class="container">
+                <div class="row justify-content-center form-container">
+                <form action="efetuar-cadastro.php" method="POST" class="col-md-8">
+            <div class="form-group">
                 <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
+                <input type="text" class="form-control" id="nome" name="nome" required>
+            </div>
+            <div class="form-group">
                 <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
                 <label for="senha">Senha:</label>
-                <input type="password" id="senha" name="senha" required>
-                <input type="hidden" name="tipo" value="2">
-                <button type="submit" class="btn-login">Cadastrar-se</button>
-            </form>
+                <input type="password" class="form-control" id="senha" name="senha" required>
+            </div>
+            <input type="hidden" name="tipo" value="2">
+            <center><button type="submit" class="btn btn-primary">Cadastrar-se</button></center>
+        </form>
         </div>
     </div>
 

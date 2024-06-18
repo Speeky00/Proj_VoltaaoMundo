@@ -1,4 +1,4 @@
-<?php include_once "verificar.php" ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <title>Venha conhecer a França!</title>
 </head>
-<body style="background-color: rgb(207, 206, 206);">
+<body >
     <div class="container-fluid">
         <div class="row">
             <div class="col text-center" id="header" style="background-color:#0055a4; color: #FFFFFF; font-family: 'Open Sans', sans-serif;">
@@ -24,8 +24,16 @@
 
     <div id="wrapper" class="toggled">
         <div id="page-content-wrapper">
-            <div class="container-fluid border">
-                <div class= "row">
+            <div class="container-fluid">
+                <div class= "row mt-5">
+                    <div class="col m-2 align-items-center text-center">
+                        <h1>Painel Administrativo</h1>
+                        <h2>Bem Vindo(a) </h2> 
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class= "row mt-5">
                     <div class="col m-2 align-items-center text-right">
                         <button class="btn btn-primary"><a href="listaadm.php" style="color:black">Comentarios</a></button><br>
                     </div>

@@ -28,21 +28,29 @@ $lista=$comentario->listarrejeitadas();
 
     <div id="wrapper" class="toggled">
         <div id="page-content-wrapper">
-        <table border="3">
-    <tr>
-        <th>Email</th>
-        <th>Comentários</th> 
-    </tr>
-    
-    <?php foreach ($lista as $linha): ?>
-        <tr>
-            <td><?php echo $linha['email']; ?></td>
-            <td><?php echo $linha['comentario']; ?></td>  
-            <td><a href="excluircomentario.php?id=<?=$linha['id']?>"><button type="submit" class="btn btn-danger">Excluir</button></a></td>
-        </tr>
-    <?php endforeach; ?> 
-</table>
-<a href="listaadm.php">Voltar</a>
+        <div class="container-fluid m-2">
+            <center><h1>Comentarios Rejeitados</h1></center>
+        </div>
+        <div class="row">
+            <div class="col-md-8 offset-md-2 p-2">
+                <div class="list-group">
+                    <?php foreach ($lista as $linha): ?>
+                        <div class="list-group-item d-flex justify-content-between align-items-center">
+                            <div>
+                                <h5 class="mb-1"><?php echo $linha['email']; ?></h5>
+                                <p class="mb-1"><?php echo $linha['comentario']; ?></p>
+                            </div>
+                            <div class="ml-auto">
+                                <a href="excluircomentario.php?id=<?=$linha['id']?>" class="btn btn-danger">Excluir</a>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        </div>
+        <div class="container"><center>
+            <a href="listaadm.php"><button type="button" class="btn btn-primary">Voltar</button></a>
+        </div>
     </div>
 
     <div class="container-fluid">
