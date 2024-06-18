@@ -28,25 +28,36 @@ $lista=$comentario->listar();
 
     <div id="wrapper" class="toggled">
         <div id="page-content-wrapper">
-        <table border="3">
-    <tr>
-        <th>Email</th>
-        <th>Comentários</th> 
-    </tr>
-    
-    <?php foreach ($lista as $linha): ?>
-        <tr>
-            <td><?php echo $linha['email']; ?></td>
-            <td><?php echo $linha['comentario']; ?></td>
-            <td><a href="excluircomentario.php?id=<?=$linha['id']?>">                
-        </tr>
-    <?php endforeach; ?> 
-</table>
-<a href="inseriradm.php"><button type="button" class="btn btn-primary">Novo Comentário</button></a><br>
-<a href="aguardo.php">Comentarios em aguardo</a><br>
-<a href="rejeitadas.php">Comentarios rejeitados</a>
-<br>
-<a href="adm.php">Voltar</a>
+            <div class="container">
+            <table border="3">
+                <tr>
+                    <th>Email</th>
+                    <th>Comentários</th> 
+                </tr>
+            <?php foreach ($lista as $linha): ?>
+            <tr>
+                <td><?php echo $linha['email']; ?></td>
+                <td><?php echo $linha['comentario']; ?></td>
+                <td><a href="excluircomentario.php?id=<?=$linha['id']?>">                
+            </tr>
+            <?php endforeach; ?> 
+            </table>
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <a href="inseriradm.php"><button type="button" class="btn btn-primary">Novo Comentário</button></a>
+                </div>
+                <div class="col-3">
+                <a href="aguardo.php"><button type="button" class="btn btn-primary">Comentarios em aguardo</button></a>
+                </div>
+                <div class="col-3">
+                    <a href="rejeitadas.php"><button type="button" class="btn btn-primary">Comentarios rejeitados</button></a>
+                    </div>
+                <div class="col-3">
+                    <a href="adm.php">Voltar</a>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="container-fluid">

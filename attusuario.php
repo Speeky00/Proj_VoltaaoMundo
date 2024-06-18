@@ -1,7 +1,19 @@
 <?php
-require_once "classes/Comentario.php";
-$comentario=new Comentario();
-$lista=$comentario->listar();
+session_start();
+require_once "classes/Usuario.php";
+require_once "classes/Tipo.php";
+
+if (!isset($_SESSION['userid'])) {
+    header('Location: login.php');
+    exit;
+}
+$id=$_GET['id'];
+$usuario = new Usuario($id);
+$_lista=$usuario->listar();
+$tipo=new Tipo();
+$listaTipo=$tipo->listar();
+
+$userid = $_SESSION['userid'];
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -28,25 +40,34 @@ $lista=$comentario->listar();
 
     <div id="wrapper" class="toggled">
         <div id="page-content-wrapper">
-        <table border="3">
-    <tr>
-        <th>Email</th>
-        <th>Comentários</th> 
-    </tr>
-    
-    <?php foreach ($lista as $linha): ?>
-        <tr>
-            <td><?php echo $linha['email']; ?></td>
-            <td><?php echo $linha['comentario']; ?></td>                
-        </tr>
-    <?php endforeach; ?> 
-</table>
-<a href="login.php"><button type="button" class="btn btn-primary">Novo Comentário</button></a>
-<a href="pagina-inicial.html"><button type="button" class="btn btn-primary">Voltar</button></a>
+        <h1>Alterar Dados de <?=$usuario->nome?></h1>
+        <form action="alterarusuario.php" method="POST">
+            <input type="hidden" name="id" value="<?= $id ?>">
+            <label for="nome">Nome:</label> 
+            <input type="text" id="nome" name="nome" value="<?=$usuario->nome?>">
+            <label for="email">Email:</label> 
+            <input type="email" id="email" name="email" value="<?=$usuario->email?>">
+            <label for="senha">Senha:</label> 
+            <input type="password" id="senha" name="senha">
+            <select name="tipo" id="tipo">
+            <option value=''>Selecione...</option>
+            <?php
+                foreach ($listaTipo as $tipo):
+                    echo "<option value='{$tipo['id']}'selected>
+                        {$tipo['tipo']}
+                        </option>";
+                endforeach;
+            ?>
+        </select><br><br>
+
+            <button type="submit" class="btn-login">Alterar</button>
+        </form>
+        </div>
+        <a href="listausuarios.php">Cancelar</a>
     </div>
 
     <div class="container-fluid">
-    <footer class="footer text-center py-1 fixed-bottom"style="background-color:#0055a4; color: #FFFFFF; font-family: 'Open Sans', sans-serif;">
+    <footer class="footer text-center py-1 fixed-bottom" style="background-color:#0055a4; color: #FFFFFF; font-family: 'Open Sans', sans-serif;">
         <p class="m-0"><strong>Projeto Volta ao Mundo - Desenvolvimento Web III</strong></p>
     </footer>
     </div>

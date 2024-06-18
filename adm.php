@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <title>Venha conhecer a França!</title>
 </head>
-<body>
+<body style="background-color: rgb(207, 206, 206);">
     <div class="container-fluid">
         <div class="row">
             <div class="col text-center" id="header" style="background-color:#0055a4; color: #FFFFFF; font-family: 'Open Sans', sans-serif;">
@@ -24,10 +24,23 @@
 
     <div id="wrapper" class="toggled">
         <div id="page-content-wrapper">
-            <a href="listaadm.php">Conentarios</a><br>
-        <a href="sair.php">Sair</a>
+            <div class="container-fluid border">
+                <div class= "row">
+                    <div class="col m-2 align-items-center text-right">
+                        <button class="btn btn-primary"><a href="listaadm.php" style="color:black">Comentarios</a></button><br>
+                    </div>
+                    <div class="col m-2 align-items-center text-left">
+                    <button class="btn btn-primary"><a href="listausuarios.php" style="color:black">Usuarios</a></button>
+                    </div>
+                </div>
+                <div class= "row">
+                    <div class="col m-2 align-items-center text-center">
+                    <button class="btn btn-danger"><a href="sair.php" style="color:black">Sair</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
     <div class="container-fluid">
     <footer class="footer text-center py-1 fixed-bottom"style="background-color:#0055a4; color: #FFFFFF; font-family: 'Open Sans', sans-serif;">
         <p class="m-0"><strong>Projeto Volta ao Mundo - Desenvolvimento Web III</strong></p>

@@ -3,11 +3,10 @@ try {
     $nome = $_POST["nome"];
     $email = $_POST["email"];
     $senha = hash("sha256", $_POST["senha"]);
-    $tipo = 2; // Tipo de usuário padrão
+    $tipo = 2;
     $now = new DateTime();
     $date = $now->format('d-m-Y');
 
-    // SQL para inserir o novo usuário com tipo 2
     $sql = "INSERT INTO usuarios(nome, email, senha, tipo, datacad) VALUES (:nome, :email, :senha, :tipo, :datacad)";
 
     include_once "classes/conexao.php";

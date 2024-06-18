@@ -14,7 +14,7 @@ class Usuario{
     }
 
     public function listar(){
-        $sql="SELECT * FROM usuarios";
+        $sql="SELECT u.id,u.nome,u.email,u.senha,t.tipo FROM usuarios u JOIN TIPO t WHERE u.tipo=t.id";
         include "classes/conexao.php";
         $resultado=$conexao->query($sql);
         $lista=$resultado->fetchAll();
@@ -22,7 +22,7 @@ class Usuario{
     }
 
     public function carregar(){
-        $sql="SELECT * FROM WHERE id=".$this->id;
+        $sql="SELECT * FROM usuarios WHERE id=".$this->id;
         include "classes/conexao.php";
         $resultado=$conexao->query($sql);
         $linha=$resultado->fetch();
@@ -42,6 +42,18 @@ class Usuario{
         include "Classes/conexao.php";
         $conexao->exec($sql);
         echo "Registro gravado com sucesso!";
+    }
+
+    public function atualizar(){
+        $sql = "UPDATE usuarios SET nome = :nome, email = :email, senha = :senha, tipo = :tipo WHERE id = :id";
+        include "classes/conexao.php";
+        $stmt = $conexao->prepare($sql);
+        $stmt->bindParam(':nome', $this->nome);
+        $stmt->bindParam(':email', $this->email);
+        $stmt->bindParam(':senha', $this->senha);
+        $stmt->bindParam(':tipo', $this->tipo);
+        $stmt->bindParam(':id', $this->id);
+        $stmt->execute();
     }
 }
 ?>

@@ -1,3 +1,11 @@
+<?php
+
+    require_once "classes/Comentario.php";
+    $comentario=new Comentario();
+    $lista=$comentario->listar();
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -23,7 +31,7 @@
 
     <div id="wrapper" class="toggled">
         <div id="sidebar-wrapper">
-            <ul class="sidebar-nav mt-5">
+            <ul class="sidebar-nav mt-2">
                 <li class="sidebar-brand text-center">
                     <a href="index.html"> <img src="img/3187465.png">França
                       <img src="img/3187465.png">
@@ -45,25 +53,30 @@
                     <a href="curiosidades.html"><img src="img/homi.png" width="47px">Curiosidades</a>
                 </li>
                 <li>
-                    <a href="listarcomentarios.php"><img src="img/info.png" width="42px">Comentarios</a>
-                </li>
-                <li>
-                    <a href="login.php"><img src="img/info.png" width="42px">Login</a>
+                    <a href="comentarios.php"><img src="img/info.png" width="42px">Comentarios</a>
                 </li>
                 <li>
                     <a href="sobre.html"><img src="img/info.png" width="42px">Sobre</a>
                 </li>
             </ul>
         </div>
+
         <div id="page-content-wrapper">
-        <h1>Obrigado pelo comentario!</h1>
-        <a href="inserircomentario.php">Inserir outro comentario</a><br>
-        <a href="logout.php">Sair</a>
+            <a href="#menu-toggle" class="btn btn-default" id="menu-toggle"><img src="img/menu.png"></a><br>
+            <div class="container">
+                <div class="row">
+                   <p>Teste
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="container-fluid">
         <footer class="footer text-center py-1 fixed-bottom"style="background-color:#0055a4; color: #FFFFFF; font-family: 'Open Sans', sans-serif;">
             <p class="m-0"><strong>Projeto Volta ao Mundo - Desenvolvimento Web III</strong></p>
         </footer>
     </div>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="script/scr01.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

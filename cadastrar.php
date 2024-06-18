@@ -54,7 +54,6 @@
         </div>
         
         <div id="page-content-wrapper">
-            <a href="#menu-toggle" class="btn btn-default" id="menu-toggle"><img src="img/menu.png"></a><br>
             <form action="efetuar-cadastro.php" method="POST">
                 <h1>Cadastro</h1>
                 <label for="nome">Nome:</label>

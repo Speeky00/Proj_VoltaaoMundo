@@ -4,5 +4,5 @@
     $id=$_GET['id'];
     $comentario= new Comentario($id);
     $comentario->excluir();
-    header('Location: listacomentario.php');
+    header('Location: rejeitadas.php');
 ?>

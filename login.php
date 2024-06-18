@@ -56,15 +56,26 @@
             </ul>
         </div>
         <div id="page-content-wrapper">
-        <h1>Faça login para escrever um comentario:</h1><br>
-            <form action="autenticar.php" method="POST">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email">
-                <label for="senha">Senha:</label>
-                <input type="password" id="senha" name="senha">
-                <a href="cadastrar.php">Cadastre-se</a>
-                <button type="submit" class="btn-login">Login</button>
-            </form>
+            <div class="container-fluid">
+                <div class="row ">
+                    <div class="col m-5">
+                    <h1><center>Faça login para escrever um comentario:</center></h1>
+                    </div>
+                </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col m-5 justify-content-center"><center>
+                        <form action="autenticar.php" method="POST">
+                            <label for="email">Email:</label>
+                            <input type="email" class="form-control col-3"style="border-color:black;" id="email" name="email"><br>
+                            <label for="senha">Senha:</label>
+                            <input type="password" class="form-control col-3" style="border-color:black; id="senha" name="senha"><br>
+                            <button class="btn btn-dark m-1"><a href="cadastrar.php">Cadastre-se</a></button>
+                            <button type="submit" class="btn btn-dark">Login</button>
+                        </center></form>
+                    </div>
+                </div>
+            </div>
         </div>    
     </div>
     <div class="container-fluid">

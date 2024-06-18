@@ -1,7 +1,7 @@
 <?php
-require_once "classes/Comentario.php";
-$comentario=new Comentario();
-$lista=$comentario->listar();
+require_once "classes/Usuario.php";
+$usuario=new Usuario();
+$lista=$usuario->listar();
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -30,19 +30,22 @@ $lista=$comentario->listar();
         <div id="page-content-wrapper">
         <table border="3">
     <tr>
-        <th>Email</th>
-        <th>Comentários</th> 
+        <th>Nome</th>
+        <th>Email</th> 
+        <th>Tipo</th>
     </tr>
     
     <?php foreach ($lista as $linha): ?>
         <tr>
+            <td><?php echo $linha['nome']; ?></td>
             <td><?php echo $linha['email']; ?></td>
-            <td><?php echo $linha['comentario']; ?></td>                
+            <td><?php echo $linha['tipo']; ?></td>
+            <td><a href="attusuario.php?id=<?=$linha['id']?>">Alterar</a></td>
+            <td><a href=".php?id=<?=$linha['id']?>">Excluir</a></td>
         </tr>
     <?php endforeach; ?> 
 </table>
-<a href="login.php"><button type="button" class="btn btn-primary">Novo Comentário</button></a>
-<a href="pagina-inicial.html"><button type="button" class="btn btn-primary">Voltar</button></a>
+<a href="adm.php">Voltar</a>
     </div>
 
     <div class="container-fluid">

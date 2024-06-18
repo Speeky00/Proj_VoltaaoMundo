@@ -37,7 +37,8 @@ $lista=$comentario->listarrejeitadas();
     <?php foreach ($lista as $linha): ?>
         <tr>
             <td><?php echo $linha['email']; ?></td>
-            <td><?php echo $linha['comentario']; ?></td>                
+            <td><?php echo $linha['comentario']; ?></td>  
+            <td><a href="excluircomentario.php?id=<?=$linha['id']?>"><button type="submit" class="btn btn-danger">Excluir</button></a></td>
         </tr>
     <?php endforeach; ?> 
 </table>
