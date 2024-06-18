@@ -56,7 +56,7 @@ $lista=$comentario->listar();
                 </div>
                 <div class="row mt-2">
                     <div class="col text-center">
-                        <a href="adm.php"><button type="button"class="btn btn-primary">Voltar</button></a>
+                        <a href="adm.php"><button type="button"class="btn btn-primary mt-2 mb-5">Voltar</button></a>
                     </div>
                 </div>
             </div>

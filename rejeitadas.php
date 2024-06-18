@@ -49,7 +49,7 @@ $lista=$comentario->listarrejeitadas();
             </div>
         </div>
         <div class="container"><center>
-            <a href="listaadm.php"><button type="button" class="btn btn-primary">Voltar</button></a>
+            <a href="listaadm.php"><button type="button" class="btn btn-primary mt-2 mb-5">Voltar</button></a>
         </div>
     </div>
 

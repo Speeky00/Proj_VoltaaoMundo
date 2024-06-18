@@ -66,14 +66,14 @@ $lista = $comentario->listarespera();
         </div>
         <div class="container">
             <div class="row">
-                <div class="col text-center">
+                <div class="col text-center m-1">
                     <a href="inseriradm.php"><button type="button" class="btn btn-primary">Novo Comentário</button></a>
                     <a href="rejeitadas.php"><button type="button" class="btn btn-warning">Comentarios rejeitados</button></a>
                 </div>
             </div>
             <div class="row mt-2">
                 <div class="col text-center">
-                    <a href="listaadm.php"><button type="button" class="btn btn-primary">Voltar</button></a>
+                    <a href="listaadm.php"><button type="button" class="btn btn-primary mt-2 mb-5">Voltar</button></a>
                 </div>
             </div>
         </div>

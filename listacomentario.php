@@ -45,8 +45,8 @@ $lista=$comentario->listar();
             </div>
         </div>
         <div class="container"><center>
-            <a href="login.php"><button type="button" class="btn btn-primary">Novo Comentário</button></a>
-            <a href="pagina-inicial.html"><button type="button" class="btn btn-primary">Voltar</button></a>
+            <a href="login.php"><button type="button" class="btn btn-primary mb-5">Novo Comentário</button></a>
+            <a href="pagina-inicial.html"><button type="button" class="btn btn-primary mb-5">Voltar</button></a>
                     </center></div>
         </div>
 
